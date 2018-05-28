@@ -4,11 +4,11 @@
 # storeconfigs.
 #
 class munin::node::export (
-  $address,
-  $fqn,
-  $masterconfig,
-  $mastername,
-  $node_definitions = {},
+  String $address,
+  String $fqn,
+  Array[String] $masterconfig,
+  String $mastername,
+  Hash $node_definitions = {},
 )
 {
   Munin::Master::Node_definition {
